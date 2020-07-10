@@ -7,12 +7,12 @@
 ```sh
 1. git clone https://github.com/emmadal/react_denoMongoDB
 2. cd react_denoMongoDB
-3. deno run --allow-net --allow-read --allow-write --allow-env --allow-plugin --unstable server.ts
+3. deno run --allow-net --allow-read --allow-write --allow-plugin --unstable server.ts
 ```
 
 ### API Routes
 
-```
+```js
 GET /employees
 GET /employee/:id
 POST /employee
