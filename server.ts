@@ -4,8 +4,8 @@ import { NotFound } from "./404.ts";
 import router from "./routes.ts";
 
 const app = new Application();
-const PORT = Deno.env.get("PORT") || 5000;
-const HOST = Deno.env.get("HOST") || "http://localhost";
+const PORT = 5000;
+const HOST = "http://localhost";
 
 app.use(oakCors());
 app.use(router.routes());
@@ -13,4 +13,4 @@ app.use(router.allowedMethods());
 app.use(NotFound);
 
 console.log(`🚀 server started at ${HOST}:${PORT}`);
-await app.listen({ port: Number(PORT) });
+await app.listen({ port: PORT });
