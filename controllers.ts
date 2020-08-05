@@ -26,7 +26,7 @@ export const Controllers = {
       ctx.response.body = { error: "Please provide the required data" };
       return;
     }
-    const { value } = await ctx.request.body();
+    const value = await (await ctx.request.body()).value;
     if (!value?.name || !value?.email || !value?.job || !value?.age) {
       ctx.response.status = 404;
       ctx.response.body = { error: "name, email, job and age are required" };
@@ -46,7 +46,7 @@ export const Controllers = {
     ctx.response.body = { message: "User was deleted" };
   },
   updateUser: async (ctx: any) => {
-    const { value } = await ctx.request.body();
+    const value = await(await ctx.request.body()).value;
     if (!ctx.request.hasBody) {
       ctx.response.status = 404;
       ctx.response.body = { message: "Please fill all fields before to update" };
