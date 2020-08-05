@@ -5,8 +5,8 @@
 ## Get started
 
 ```sh
-1. git clone https://github.com/emmadal/react_denoMongoDB
-2. cd react_denoMongoDB
+1. git clone https://github.com/emmadal/denomongo
+2. cd denomongo
 3. deno run --allow-net --allow-read --allow-write --allow-plugin --unstable server.ts
 ```
 
