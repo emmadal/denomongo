@@ -1,1 +1,0 @@
-web: deno run --allow-net=:5000 --allow-read --allow-write --allow-plugin --unstable server.ts --port=5000
